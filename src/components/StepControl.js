@@ -9,17 +9,13 @@ class StepControl extends React.Component {
     }
   }
 
-  handleClickBorder = (id) => {
-    console.log(id)
-    console.log(this.state.stepOn) 
+  handleClickBorder = (id) => {    
     let newArray = {...this.state.stepOn}
     newArray[id] = !newArray[id];
-
     this.setState({
       stepOn: newArray
-    })
-
-  }
+    });
+  };
 
   render() {
     return (      
@@ -27,7 +23,7 @@ class StepControl extends React.Component {
       borderOnClick={this.handleClickBorder}
       stepOn={this.state.stepOn}
       />
-    )
+    );
   };
 };
 
