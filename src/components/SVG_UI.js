@@ -5,7 +5,13 @@ function HeptSvg(props) {
   const { stepOn } = props
 
   const bg1 = stepOn[0] ? "#00d547" : null;
-  const b1 = stepOn[0] ? "#00d547" : null;  
+  const bg2 = stepOn[1] ? "#00d547" : null;
+  const bg3 = stepOn[2] ? "#00d547" : null;
+  const bg4 = stepOn[3] ? "#00d547" : null;
+  const bg5 = stepOn[4] ? "#00d547" : null;
+  const bg6 = stepOn[5] ? "#00d547" : null;
+  const bg7 = stepOn[6] ? "#00d547" : null;
+  
 
   return (
     <React.Fragment>      
@@ -47,22 +53,28 @@ function HeptSvg(props) {
               fill={bg1}/>
             <path               
               d="m 204.07074,15.034768 v 9.978203 l 141.54899,67.963809 7.43881,-6.192904 z"
-              id="bg2" />
+              id="bg2"
+              fill={bg2} />
             <path            
               d="m 354.14942,88.054598 -7.50237,6.245613 34.95651,152.699719 9.36636,2.37557 z"
-              id="bg3" />
+              id="bg3"
+              fill={bg3} />
             <path            
               d="m 381.15761,248.61482 -97.9656,122.48089 4.31342,9.35242 103.2025,-129.41124 z"
-              id="bg4" />
+              id="bg4"
+              fill={bg4} />
             <path            
               d="m 124.89211,371.68484 -4.5129,9.59889 h 165.66741 l -4.42714,-9.59889 z"
-              id="bg5" />
+              id="bg5"
+              fill={bg5} />
             <path            
               d="m 25.262022,248.45876 -9.585462,2.69957 103.19318,129.40039 4.46123,-9.48936 z"
-              id="bg6" />
+              id="bg6"
+              fill={bg6} />
             <path            
               d="M 52.186994,87.839108 15.282786,249.52949 24.987103,246.79633 59.879548,94.376691 Z"
-              id="bg7" />
+              id="bg7"
+              fill={bg7} />
           </g>
           <g id="starGlow">
             <path
@@ -129,38 +141,50 @@ function HeptSvg(props) {
           id="border">
           <path
             className="side" 
-            fill={b1}           
+            fill={bg1}           
             onClick={() => props.borderOnClick(0)}
             d="M 769.74721,60.497033 201.9395,332.8922 230.03911,356.77306 769.74721,98.672815 Z"
             transform="scale(0.26458333)"
             id="b1"/>
           <path
             className="side"
+            fill={bg2} 
+            onClick={() => props.borderOnClick(1)}
             d="m 772.26951,60.843517 v 37.712894 l 537.89219,257.854059 28.1152,-23.40625 z"
             transform="scale(0.26458333)"
             id="b2"/>
           <path
             className="side"
+            fill={bg3} 
+            onClick={() => props.borderOnClick(2)}
             d="m 1340.574,335.54803 -28.3554,23.60547 132.9822,580.55263 33.9574,7.24685 z"
             transform="scale(0.26458333)"
             id="b3"/>
           <path
             className="side"
+            fill={bg4} 
+            onClick={() => props.borderOnClick(3)}
             d="m 1442.3012,943.46348 -368.8826,463.00052 16.3027,35.3477 389.2528,-490.05975 z"
             transform="scale(0.26458333)"
             id="b4"/>
           <path
             className="side"
+            fill={bg5}
+            onClick={() => props.borderOnClick(4)} 
             d="m 473.06234,1408.8985 -17.05665,36.2793 631.05941,-0.034 -16.7325,-36.2793 z"
             transform="scale(0.26458333)"
             id="b5"/>
           <path
             className="side"
+            fill={bg6} 
+            onClick={() => props.borderOnClick(5)}
             d="m 97.552563,942.10648 -36.228516,10.20312 391.448973,491.0808 16.86133,-35.8653 z"
             transform="scale(0.26458333)"
             id="b6"/>
           <path
             className="side"
+            fill={bg7} 
+            onClick={() => props.borderOnClick(6)}
             d="M 199.07275,334.54123 59.238281,948.68945 98.786571,938.93436 228.14697,359.25022 Z"
             transform="scale(0.26458333)"
             id="b7"/>
