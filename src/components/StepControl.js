@@ -1,11 +1,13 @@
 import React from 'react';
 import SVG_UI from './SVG_UI';
+import Seq from './Seq';
 
 class StepControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {      
-      stepOn: [false, false, false, false, false, false, false]
+      stepOn: [false, false, false, false, false, false, false],
+      
     }
   }
 
@@ -17,12 +19,20 @@ class StepControl extends React.Component {
     });
   };
 
+  
+
   render() {
-    return (      
-      <SVG_UI
-      borderOnClick={this.handleClickBorder}
-      stepOn={this.state.stepOn}
-      />
+    return (   
+      <div>
+        <SVG_UI
+        borderOnClick={this.handleClickBorder}
+        stepOn={this.state.stepOn}
+        activeLine={this.state.activeLine}
+        />
+        <Seq
+        currentStep={this.state.stepOn}
+        />
+      </div>   
     );
   };
 };

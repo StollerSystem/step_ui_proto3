@@ -6,3 +6,8 @@ body {
 .side:hover {
   fill: #75a986;
 }
+
+.App {
+  margin: auto;
+  width: 50%;
+}
