@@ -1,6 +1,10 @@
 import React from 'react';
 
 function HeptSvg(props) {
+
+  const bg1 = props.stepOn[0] ? "black" : "green";
+
+
   return (
     <React.Fragment>      
       <svg
@@ -82,7 +86,8 @@ function HeptSvg(props) {
             id="bg2" />
           <path            
             d="M 202.39591,14.948985 53.422061,86.690859 60.856749,93.009337 202.39591,25.049661 Z"
-            id="bg1" />
+            id="bg1" 
+            fill={bg1}/>
         </g>
         <g
           id="star">
@@ -161,7 +166,7 @@ function HeptSvg(props) {
             id="b2"
           />
           <path
-            className="side"
+            className="side"            
             onClick={() => props.borderOnClick(0)}
             d="M 769.74721,60.497033 201.9395,332.8922 230.03911,356.77306 769.74721,98.672815 Z"
             transform="scale(0.26458333)"

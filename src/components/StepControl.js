@@ -4,15 +4,21 @@ import SVG_UI from './SVG_UI';
 class StepControl extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      test: "test",
+    this.state = {      
       stepOn: [false, false, false, false, false, false, false]
     }
   }
 
-  handleClickBorder(id) {
+  handleClickBorder = (id) => {
     console.log(id)
-    console.log(this.state.test)    
+    console.log(this.state.stepOn) 
+    let newArray = {...this.state.stepOn}
+    newArray[id] = !newArray[id];
+
+    this.setState({
+      stepOn: newArray
+    })
+
   }
 
   render() {
